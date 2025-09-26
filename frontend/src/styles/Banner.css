@@ -74,26 +74,25 @@
   /* mobile */
   .banner {
     min-height: 180px;
-    height: 180px;
-    padding: 0.5rem;
-    width: 100%;
+    height: 300px;
+    width: 80vh;
   }
   .banner-content {
+    max-width: 70%;
     padding: 0.5rem;
-    max-width: 100%;
     align-items: center;
     text-align: center;
   }
   .banner-content h1 {
-    font-size: 1.1rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
-  .banner-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 0.7rem;
+  .banner-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   .banner-cta-btn {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.4rem 0.8rem;
   }
 }
@@ -115,9 +114,9 @@
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
   }
-  .banner-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+  .banner-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   .banner-cta-btn {
     font-size: 1rem;
@@ -139,10 +138,6 @@
   }
   .banner-content h1 {
     font-size: 2.2rem;
-    margin-bottom: 1.2rem;
-  }
-  .banner-subtitle {
-    font-size: 1.3rem;
     margin-bottom: 1.2rem;
   }
   .banner-cta-btn {
