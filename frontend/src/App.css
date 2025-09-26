@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+  }
+
+  .App {
+    text-align: center;
+  }
+
+  .App-header {
+    background-color: #282c34;
+    padding: 2rem 1rem;
+    color: white;
+  }
+
+  .cursos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .curso-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 320px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .curso-card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .cursos-list {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0.5rem;
+    }
+    .curso-card {
+      max-width: 100%;
+    }
+  }
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

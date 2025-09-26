@@ -1,0 +1,31 @@
+# Node.js (React frontend)
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+/frontend/.DS_Store
+/frontend/.npm/
+/frontend/.cache/
+/frontend/package-lock.json
+
+# PHP (backend)
+/backend/*.log
+/backend/.DS_Store
+/backend/vendor/
+
+# VSCode
+.vscode/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Outros
+.env
+*.env
+
+# Diretórios de dependências
+**/node_modules/
+**/vendor/
