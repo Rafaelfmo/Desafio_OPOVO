@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Navbar.css";
+import "../../styles/Navbar.css";
 
 const scrollToSection = (id) => {
   const section = document.querySelector(id);

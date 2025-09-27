@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/CursoCard.css";
+import "../../styles/CursoCard.css";
 
 const CursoCard = ({ curso, onVerMais }) => {
-  const descricaoReduzida =
-    curso.descricao.length > 120
-      ? curso.descricao.slice(0, 120) + "..."
-      : curso.descricao;
+  // const descricaoReduzida =
+  //   curso.descricao.length > 120
+  //     ? curso.descricao.slice(0, 120) + "..."
+  //     : curso.descricao;
 
   return (
     <div className="curso-card">

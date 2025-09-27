@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SobreUANE.css";
+import "../../styles/SobreUANE.css";
 
 const SobreUANE = () => (
   <section className="sobre-dados" id="sobre">

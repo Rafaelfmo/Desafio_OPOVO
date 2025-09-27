@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/Depoimentos.css";
+import "../../styles/Depoimentos.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const depoimentos = [
