@@ -1,19 +1,18 @@
+/* PARCEIROS - CSS INSTITUCIONAL DO ZERO */
 .parcerias-container {
   width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 2.5rem 1rem;
+  background: #f5f7fa;
+  padding: 3rem 0;
 }
 
 .parcerias-titulo {
   font-size: 2rem;
   font-weight: bold;
-  color: #222;
-  margin-bottom: 2rem;
+  color: #1a2952;
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
 }
-
 .parcerias-titulo::before {
   content: "";
   display: inline-block;
@@ -27,108 +26,96 @@
 .parcerias-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
 .parceria-card {
-  display: flex;
-  align-items: center;
-  background: #f5f5f5;
+  background: #e5e8ef;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1.5px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 320px;
+  min-height: 320px;
   padding: 1.5rem 1rem;
+  margin: 0 auto;
   transition: box-shadow 0.2s;
 }
-
 .parceria-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
 }
-
 .parceria-logo {
-  flex: 0 0 200px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 160px;
-  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
-
 .parceria-logo img {
-  max-width: 250px;
-  max-height: 140px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
-
 .parceria-info {
-  flex: 1;
+  text-align: center;
 }
-
 .parceria-info h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #1a2952;
   margin-bottom: 0.5rem;
-  color: #222;
 }
-
 .parceria-info p {
   font-size: 1rem;
   color: #444;
   margin-bottom: 1rem;
 }
-
 .parceria-redes {
   display: flex;
   gap: 1.2rem;
+  justify-content: center;
 }
-
 .parceria-redes a {
   color: #0097a7;
   font-size: 1.5rem;
   transition: color 0.2s;
 }
-
 .parceria-redes a:hover {
   color: #00796b;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
+  .parcerias-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
   .parceria-card {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 400px;
+    min-height: 220px;
+    margin: 0 1rem 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
   .parceria-logo {
-    margin-right: 0;
+    width: 160px;
+    height: 100px;
     margin-bottom: 1rem;
-    height: 80px;
-  }
-}
-
-@media (max-width: 600px) {
-  .parcerias-container {
-    padding: 1.2rem 0.5rem;
-  }
-  .parcerias-titulo {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-  .parceria-card {
-    padding: 0.7rem 0.3rem;
-  }
-  .parceria-logo {
-    height: 60px;
-  }
-  .parceria-logo img {
-    max-width: 90px;
-    max-height: 60px;
   }
   .parceria-info h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .parceria-info p {
-    font-size: 0.9rem;
-  }
-  .parceria-redes a {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 }

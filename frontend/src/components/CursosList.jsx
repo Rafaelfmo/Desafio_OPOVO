@@ -37,20 +37,22 @@ const CursosList = () => {
   };
 
   return (
-    <section className="cursos-list container" id="cursos">
-      <h2>Cursos</h2>
-      <div className="cursos-grid">
-        {loading ? (
-          <p>Carregando cursos...</p>
-        ) : (
-          <Slider {...settings}>
-            {cursos.map((curso) => (
-              <div key={curso.id} style={{ padding: "0 16px" }}>
-                <CursoCard curso={curso} onVerMais={handleVerMais} />
-              </div>
-            ))}
-          </Slider>
-        )}
+    <section className="cursos-list" id="cursos">
+      <div className="container">
+        <h2>Cursos</h2>
+        <div className="cursos-grid">
+          {loading ? (
+            <p>Carregando cursos...</p>
+          ) : (
+            <Slider {...settings}>
+              {cursos.map((curso) => (
+                <div key={curso.id} style={{ padding: "0 16px" }}>
+                  <CursoCard curso={curso} onVerMais={handleVerMais} />
+                </div>
+              ))}
+            </Slider>
+          )}
+        </div>
       </div>
     </section>
   );

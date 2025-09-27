@@ -2,7 +2,7 @@
   background: #1a2952;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
   min-height: 420px;
   height: 420px;
@@ -26,20 +26,20 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 1.2rem 1rem 1rem 1rem;
+  padding: 0.1rem 1rem 1rem 1rem;
 }
 
 .curso-card-title {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.7rem;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1;
   text-align: left;
 }
 
 .curso-card-tags {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -50,7 +50,7 @@
   color: #fff;
   border-radius: 6px;
   padding: 0.18rem 0.7rem;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }

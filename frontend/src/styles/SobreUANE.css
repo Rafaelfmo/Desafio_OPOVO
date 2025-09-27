@@ -2,8 +2,8 @@
 .sobre-dados {
   background: #1a2952;
   width: 100%;
-  height: 100%;
-  padding: 4rem 2rem;
+  min-height: 100%;
+  padding: 4rem 0;
 }
 .sobre-titulo {
   display: flex;
@@ -15,7 +15,14 @@
 }
 
 .sobre-dados h2 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
   color: #fff;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  gap: 1rem;
 }
 
 .sobre-dados h2::before {
@@ -25,7 +32,6 @@
   height: 2rem;
   background: #00bcd4;
   border-radius: 0.125rem;
-  margin-right: 1rem;
 }
 .sobre-grid {
   display: grid;
@@ -42,6 +48,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 8.75rem;
+  box-shadow: 0 0 16px 2px #00bcd4, 0 0 32px 4px rgba(0, 188, 212, 0.2);
 }
 .sobre-numero {
   font-size: 2.5rem;

@@ -74,25 +74,27 @@ const settings = {
 };
 
 const Depoimentos = () => (
-  <section className="depoimentos-container container">
-    <h2 className="depoimentos-titulo">Depoimentos</h2>
-    <Slider {...settings} className="depoimentos-list">
-      {depoimentos.map((d, idx) => (
-        <div className="depoimento-card" key={idx}>
-          <div className="depoimento-foto">
-            <img src={d.foto} alt={d.nome} />
+  <section className="depoimentos-container" id="depoimentos">
+    <div className="container">
+      <h2 className="depoimentos-titulo">Depoimentos</h2>
+      <Slider {...settings} className="depoimentos-list">
+        {depoimentos.map((d, idx) => (
+          <div className="depoimento-card" key={idx}>
+            <div className="depoimento-foto">
+              <img src={d.foto} alt={d.nome} />
+            </div>
+            <div className="depoimento-texto-wrapper">
+              <div className="depoimento-texto">“{d.texto}”</div>
+            </div>
+            <div className="depoimento-footer">
+              <hr />
+              <div className="depoimento-nome">{d.nome}</div>
+              <div className="depoimento-cargo">{d.cargo}</div>
+            </div>
           </div>
-          <div className="depoimento-texto-wrapper">
-            <div className="depoimento-texto">“{d.texto}”</div>
-          </div>
-          <div className="depoimento-footer">
-            <hr />
-            <div className="depoimento-nome">{d.nome}</div>
-            <div className="depoimento-cargo">{d.cargo}</div>
-          </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </div>
   </section>
 );
 
