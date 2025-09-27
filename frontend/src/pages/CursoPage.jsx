@@ -4,6 +4,8 @@ import BannerCurso from "../components/cursoPage/BannerCurso";
 import CursoInfo from "../components/cursoPage/CursoInfo";
 import CursoFAQDecisao from "../components/cursoPage/CursoFAQDecisao";
 import CursoFAQModulos from "../components/cursoPage/CursoFAQModulos";
+import Investimento from "../components/cursoPage/Investimento";
+import CursosCarrossel from "../components/cursoPage/CursosCarrossel";
 import Footer from "../components/home/Footer";
 import "../CursoPage.css";
 
@@ -24,6 +26,8 @@ const CursoPage = () => {
         {curso && <CursoInfo informacoes={curso.informacoes} />}
         <CursoFAQDecisao />
         <CursoFAQModulos />
+        <Investimento />
+        {curso && <CursosCarrossel cursoAtualId={curso.id} />}
       </div>
       <Footer />
     </div>

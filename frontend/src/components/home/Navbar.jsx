@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../../styles/Navbar.css";
 
 const scrollToSection = (id) => {
@@ -10,27 +11,35 @@ const scrollToSection = (id) => {
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleHamburgerClick = () => {
     setMenuOpen((open) => !open);
   };
 
-  const handleLinkClick = (e, id) => {
-    e.preventDefault();
-    scrollToSection(id);
+  const handleSectionLink = (sectionId) => {
     setMenuOpen(false);
+    if (location.pathname === "/") {
+      // Se já está na Home, faz scroll suave
+      scrollToSection(sectionId);
+    } else {
+      // Se está em outra página, navega para Home e salva id
+      localStorage.setItem("scrollToSection", sectionId);
+      navigate("/");
+    }
   };
 
   return (
     <nav className="navbar-container">
       <div className="container">
         <div className="navbar-logo">
-          <a href="#" onClick={(e) => handleLinkClick(e, "body")}>
+          <Link to="/">
             <img
               src="https://fdr.org.br/uane/wp-content/themes/theme/assets/imgs/logos/logo-uane-white.svg"
               alt="UANE Logo"
             />
-          </a>
+          </Link>
         </div>
         <button
           className="navbar-hamburger"
@@ -41,34 +50,30 @@ const Navbar = () => {
           &#9776;
         </button>
         <div className={`navbar-links${menuOpen ? " active" : ""}`}>
-          <a
+          <button
             className="navbar-link"
-            href="#cursos"
-            onClick={(e) => handleLinkClick(e, "#cursos")}
+            onClick={() => handleSectionLink("#cursos")}
           >
             Cursos
-          </a>
-          <a
+          </button>
+          <button
             className="navbar-link"
-            href="#sobre"
-            onClick={(e) => handleLinkClick(e, "#sobre")}
+            onClick={() => handleSectionLink("#sobre")}
           >
             Sobre
-          </a>
-          <a
+          </button>
+          <button
             className="navbar-link"
-            href="#parcerias"
-            onClick={(e) => handleLinkClick(e, "#parcerias")}
+            onClick={() => handleSectionLink("#parcerias")}
           >
             Parcerias
-          </a>
-          <a
+          </button>
+          <button
             className="navbar-link"
-            href="#depoimentos"
-            onClick={(e) => handleLinkClick(e, "#depoimentos")}
+            onClick={() => handleSectionLink("#depoimentos")}
           >
             Depoimentos
-          </a>
+          </button>
         </div>
       </div>
     </nav>

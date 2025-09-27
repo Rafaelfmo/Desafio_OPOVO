@@ -1,25 +1,26 @@
-/* Footer institucional moderno */
+/* Footer institucional moderno - MOBILE FIRST */
 .footer-container {
   background: #e5e5e5;
   color: #222;
-  padding: 2.5rem 0 1.2rem 0;
+  padding: 2rem 0 1.2rem 0;
   width: 100%;
 }
 
 .footer-content {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1280px;
-  margin: 0 auto;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .footer-logo img {
-  margin-top: 1.5rem;
-  max-width: 150px;
+  margin: 1.2rem auto 1.2rem auto;
+  max-width: 140px;
   height: auto;
+  display: block;
 }
 
 .footer-info,
@@ -28,11 +29,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  min-width: 180px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-address {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .footer-address a {
-  color: #0097a7;
+  color: #138e98;
   text-decoration: none;
   font-size: 1rem;
   line-height: 1.4;
@@ -49,7 +58,7 @@
 }
 
 .footer-info a {
-  color: #0097a7;
+  color: #138e98;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s;
@@ -61,11 +70,12 @@
 .footer-whatsapp {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-size: 1rem;
 }
 .footer-whatsapp a {
-  color: #0097a7;
+  color: #138e98;
   text-decoration: none;
 }
 .footer-whatsapp a:hover {
@@ -76,9 +86,10 @@
   display: flex;
   gap: 1rem;
   margin-top: 0.3rem;
+  justify-content: center;
 }
 .footer-social .footer-icons a {
-  background: #0097a7;
+  background: #138e98;
   color: #fff;
   border-radius: 50%;
   width: 38px;
@@ -98,21 +109,35 @@
   font-size: 0.95rem;
   color: #666;
   margin-top: 2rem;
+  width: 100%;
 }
-
 .footer-copy a {
-  color: #0097a7;
+  color: #138e98;
   text-decoration: none;
   transition: color 0.2s;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 2.5rem;
+    flex-wrap: wrap;
   }
   .footer-logo img {
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    max-width: 150px;
+  }
+  .footer-info,
+  .footer-contact,
+  .footer-social {
+    align-items: flex-start;
+    text-align: left;
+    min-width: 180px;
+    width: auto;
   }
 }

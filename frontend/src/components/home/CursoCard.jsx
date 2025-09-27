@@ -1,12 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/CursoCard.css";
 
-const CursoCard = ({ curso, onVerMais }) => {
-  // const descricaoReduzida =
-  //   curso.descricao.length > 120
-  //     ? curso.descricao.slice(0, 120) + "..."
-  //     : curso.descricao;
-
+const CursoCard = ({ curso }) => {
   return (
     <div className="curso-card">
       <img src={curso.imagem} alt={curso.nome} className="curso-card-img" />
@@ -19,9 +15,9 @@ const CursoCard = ({ curso, onVerMais }) => {
             </span>
           ))}
         </div>
-        <button className="curso-card-btn" onClick={() => onVerMais(curso.id)}>
+        <Link to={`/curso/${curso.id}`} className="curso-card-btn">
           Ver mais
-        </button>
+        </Link>
       </div>
     </div>
   );
