@@ -29,3 +29,6 @@ Thumbs.db
 # Diretórios de dependências
 **/node_modules/
 **/vendor/
+
+# PDF e documentos
+*.pdf

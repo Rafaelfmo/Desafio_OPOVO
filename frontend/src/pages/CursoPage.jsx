@@ -1,70 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/home/Navbar";
-// import BannerCurso from "./BannerCurso"; // componente futuro
-// import FAQ from "./FAQ"; // componente futuro
-import "../styles/CursoPage.css";
+import BannerCurso from "../components/cursoPage/BannerCurso";
+import CursoInfo from "../components/cursoPage/CursoInfo";
+import CursoFAQDecisao from "../components/cursoPage/CursoFAQDecisao";
+import CursoFAQModulos from "../components/cursoPage/CursoFAQModulos";
+import Footer from "../components/home/Footer";
+import "../CursoPage.css";
 
 const CursoPage = () => {
+  const [curso, setCurso] = useState(null);
+  // Exemplo: buscar curso com id=1 (Meninas e Mulheres no Esporte)
+  useEffect(() => {
+    fetch("http://localhost:8000/cursos.php?id=1")
+      .then((res) => res.json())
+      .then((data) => setCurso(data));
+  }, []);
+
   return (
     <div className="curso-page">
       <Navbar />
-      {/* Banner do curso */}
-      <section className="curso-banner">
-        {/* Tags, título, descrição, botão matrícula */}
-        <div className="curso-banner-content">
-          <div className="curso-tags">
-            <span className="curso-tag">Técnico</span>
-            <span className="curso-tag">EAD</span>
-          </div>
-          <h1 className="curso-titulo">Nome do Curso</h1>
-          <p className="curso-descricao">
-            Breve descrição do curso, destacando diferenciais e público-alvo.
-          </p>
-          <button className="curso-matricula-btn">Fazer matrícula</button>
-        </div>
-      </section>
-
-      {/* Informações do curso */}
-      <section className="curso-info">
-        <h2 className="curso-info-titulo">Informações do Curso</h2>
-        <ul className="curso-info-list">
-          <li>
-            <strong>Carga horária:</strong> 400h
-          </li>
-          <li>
-            <strong>Modalidade:</strong> EAD
-          </li>
-          <li>
-            <strong>Conteúdo:</strong> 10 módulos
-          </li>
-        </ul>
-      </section>
-
-      {/* FAQ para decisão */}
-      <section className="curso-faq-decisao">
-        <h2 className="curso-faq-titulo">Informações para decidir</h2>
-        {/* FAQ tópicos expansíveis */}
-        {/* Exemplo de tópico */}
-        <div className="faq-item">
-          <button className="faq-question">
-            Para quem se destina esse curso?
-          </button>
-          <div className="faq-answer">Conteúdo da resposta...</div>
-        </div>
-        {/* ...outros tópicos */}
-      </section>
-
-      {/* FAQ dos módulos */}
-      <section className="curso-faq-modulos">
-        <h2 className="curso-faq-titulo">O que você vai aprender</h2>
-        {/* FAQ módulos expansíveis */}
-        {/* Exemplo de módulo */}
-        <div className="faq-item">
-          <button className="faq-question">Módulo 1: Introdução</button>
-          <div className="faq-answer">Conteúdo do módulo...</div>
-        </div>
-        {/* ...outros módulos */}
-      </section>
+      <div className="curso-container">
+        {curso && <BannerCurso curso={curso} />}
+        {curso && <CursoInfo informacoes={curso.informacoes} />}
+        <CursoFAQDecisao />
+        <CursoFAQModulos />
+      </div>
+      <Footer />
     </div>
   );
 };

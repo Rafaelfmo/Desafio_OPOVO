@@ -1,0 +1,61 @@
+/* CursoPage.css - estilos essenciais e utilitários para página de curso */
+
+:root {
+  --color-primary: #1a2952;
+  --color-secondary: #00bcd4;
+  --color-bg: #f5f7fa;
+  --color-white: #fff;
+  --color-dark: #23272f;
+  --font-main: Arial, Helvetica, sans-serif;
+  --max-width: 1280px;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-main);
+  color: var(--color-primary);
+}
+
+.curso-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.curso-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+/* Utilitários */
+.hidden {
+  display: none !important;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Breakpoints para uso nos componentes */
+@media (min-width: 768px) {
+  .curso-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .curso-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

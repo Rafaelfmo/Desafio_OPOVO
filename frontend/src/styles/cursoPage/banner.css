@@ -1,0 +1,117 @@
+.banner-curso {
+  background: linear-gradient(180deg, #1a2952 0%, #00bcd4 150%);
+  border-radius: 0;
+  padding: 2rem 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.banner-curso-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.banner-curso-img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.banner-curso-tags {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.banner-curso-tag {
+  background: #23272f;
+  color: #00bcd4;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.banner-curso-titulo {
+  font-size: 1.4rem;
+  font-family: "Body sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  color: #fff;
+}
+.banner-curso-descricao {
+  font-size: 1rem;
+  font-family: "Body sans", sans-serif;
+  margin-bottom: 1rem;
+  color: #e0e6ed;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.banner-curso-realizacao {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.banner-curso-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.banner-curso-btn {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.banner-curso-btn:hover {
+  background: #0097a7;
+}
+
+@media (min-width: 700px) {
+  .banner-curso {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+  }
+  .banner-curso-img-wrapper {
+    max-width: 320px;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    align-items: flex-start;
+  }
+  .banner-curso-img {
+    max-width: 320px;
+    height: auto;
+  }
+  .banner-curso-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
