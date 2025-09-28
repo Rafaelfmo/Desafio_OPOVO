@@ -1,18 +1,15 @@
+.banner-section {
+  width: 100%;
+  background: linear-gradient(180deg, #1a2952 0%, #138e98 150%);
+}
+
 .banner-curso {
-  background: linear-gradient(180deg, #1a2952 0%, #00bcd4 150%);
   border-radius: 0;
   padding: 2rem 0;
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: none;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 
 .banner-curso-img-wrapper {
@@ -36,14 +33,15 @@
   flex-wrap: wrap;
 }
 .banner-curso-tag {
-  background: #23272f;
-  color: #00bcd4;
+  background: #138e98;
+  color: #fff;
   border-radius: 1rem;
   padding: 0.3rem 1rem;
   font-size: 0.95rem;
   font-weight: 600;
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 0.03em;
+  border-radius: 6px;
 }
 
 .banner-curso-titulo {
@@ -55,11 +53,12 @@
 }
 .banner-curso-descricao {
   font-size: 1rem;
-  font-family: "Body sans", sans-serif;
+  padding: 1.5rem;
+  font-family: "Body Sans";
   margin-bottom: 1rem;
-  color: #e0e6ed;
+  color: #fff;
   line-height: 1.5;
-  text-align: center;
+  text-align: justify;
 }
 
 .banner-curso-realizacao {
@@ -76,7 +75,7 @@
 }
 
 .banner-curso-btn {
-  background: #00bcd4;
+  background: #138e98;
   color: #fff;
   border: none;
   border-radius: 0.7rem;
@@ -92,26 +91,187 @@
   background: #0097a7;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 700px) and (max-width: 1024px) {
   .banner-curso {
-    flex-direction: row;
-    align-items: stretch;
-    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0;
+    box-shadow: 0 4px 24px rgba(26, 41, 82, 0.12);
   }
   .banner-curso-img-wrapper {
-    max-width: 320px;
-    margin-bottom: 0;
-    margin-right: 2rem;
-    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
   }
   .banner-curso-img {
-    max-width: 320px;
-    height: auto;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   }
-  .banner-curso-left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  .banner-curso-tags {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
     justify-content: center;
+  }
+  .banner-curso-tag {
+    font-size: 1rem;
+    padding: 0.32rem 1.1rem;
+    border-radius: 6px;
+  }
+  .banner-curso-titulo {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .banner-curso-descricao {
+    margin-top: -1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  .banner-curso-realizacao {
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+    justify-content: center;
+  }
+  .banner-curso-logo {
+    filter: brightness(1.1);
+  }
+  .banner-curso-btn {
+    font-size: 1.12rem;
+    padding: 0.8rem 2.2rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .banner-curso {
+    position: relative;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 24px rgba(26, 41, 82, 0.12);
+    min-height: 520px;
+  }
+  .banner-curso-content {
+    z-index: 1;
+  }
+  .banner-curso-img-wrapper {
+    position: absolute;
+    top: 9rem;
+    right: 7.5rem;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 400px;
+  }
+  .banner-curso-img {
+    width: 100%;
+    max-width: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+  .banner-curso-tags {
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    margin-right: 38rem;
+    padding-left: 1rem;
+  }
+  .banner-curso-titulo {
+    margin-right: auto;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+  .banner-curso-descricao {
+    font-size: 1.15rem;
+    text-align: justify;
+    margin-right: auto;
+    max-width: 40%;
+    line-height: 1.6;
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+  .banner-curso-realizacao {
+    margin-right: auto;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+    margin: auto;
+    padding-right: 38rem;
+  }
+  .banner-curso-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    margin-top: 1.2rem;
+    border-radius: 1rem;
+    margin-right: 38rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .banner-curso {
+    position: relative;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 24px rgba(26, 41, 82, 0.12);
+    min-height: 520px;
+  }
+  .banner-curso-content {
+    z-index: 1;
+  }
+  .banner-curso-img-wrapper {
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 620px;
+  }
+  .banner-curso-img {
+    width: 100%;
+    max-width: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+  .banner-curso-tags {
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    margin-right: 48rem;
+    padding-left: 1rem;
+  }
+  .banner-curso-titulo {
+    margin-right: auto;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+  .banner-curso-descricao {
+    font-size: 1.15rem;
+    text-align: justify;
+    margin-right: auto;
+    max-width: 40%;
+    line-height: 1.6;
+    margin-top: -1rem;
+  }
+  .banner-curso-realizacao {
+    margin-right: auto;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+    margin: auto;
+    padding-right: 48rem;
+  }
+  .banner-curso-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    margin-top: 1.2rem;
+    border-radius: 1rem;
+    margin-right: 48rem;
   }
 }

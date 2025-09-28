@@ -1,19 +1,14 @@
 .investimento-section {
-  background: #f7f7f7;
-  border-radius: 1rem;
   padding: 2rem 1rem;
   margin: 2rem 0;
 }
 
 .investimento-title {
   text-align: left;
-  font-size: 1.3rem;
   font-family: "Body Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: #1a2952;
-  margin-bottom: 2rem;
-  letter-spacing: 0.04em;
-  border-left: 4px solid #0097a7;
+  border-left: 4px solid #138e98;
   padding-left: 0.7rem;
 }
 
@@ -26,6 +21,16 @@
   text-align: center;
   margin-bottom: 1.5rem;
 }
+
+.beneficio-card {
+  background: #23272f;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-top: 1.5rem;
+}
+
 .investimento-lote {
   font-size: 1.05rem;
   font-family: "Body Sans", Arial, Helvetica, sans-serif;
@@ -39,7 +44,7 @@
   font-family: "Body Sans", Arial, Helvetica, sans-serif;
 }
 .investimento-btn {
-  background: #00bcd4;
+  background: #138e98;
   color: #fff;
   border: none;
   border-radius: 2rem;
@@ -55,15 +60,6 @@
   background: #0097a7;
 }
 
-.investimento-beneficio {
-  background: #23272f;
-  border-radius: 0.8rem;
-  padding: 1.2rem 1rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  margin-top: 1.2rem;
-}
-
 .beneficio-text {
   display: flex;
   flex-direction: column;
@@ -72,33 +68,62 @@
   margin-top: 0.5rem;
   color: #e0e6ed;
 }
-
 .beneficio-logo {
   height: 32px;
   margin-bottom: 0.7rem;
 }
 .beneficio-link {
-  color: #0097a7;
+  color: #138e98;
   font-weight: 700;
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) and (max-width: 1024px) {
   .investimento-section {
-    padding: 1.2rem 0.5rem;
+    padding: 1rem 2rem;
+  }
+  .investimento-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: start;
+  }
+
+  .investimento-card {
+    width: 50%;
+  }
+
+  .beneficio-card {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+
+  .investimento-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .investimento-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: start;
+  }
+
+  .investimento-card {
+    width: 50%;
+  }
+
+  .beneficio-card {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
   }
   .investimento-title {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    padding-left: 0.4rem;
-  }
-  .investimento-card {
-    padding: 1.2rem 0.5rem;
-  }
-  .investimento-parcelado {
-    font-size: 1.3rem;
-  }
-  .investimento-beneficio {
-    padding: 0.8rem 0.5rem;
+    font-size: 1.8rem;
   }
 }

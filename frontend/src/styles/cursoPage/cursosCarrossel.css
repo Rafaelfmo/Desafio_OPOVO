@@ -1,12 +1,37 @@
-.carrossel-title::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 1.3em;
-  background: #0097a7;
-  border-radius: 2px;
-  margin-right: 0.7rem;
-  vertical-align: middle;
+.carrossel-center-wrapper {
+  justify-content: center;
+  gap: 2.5rem;
+  min-height: 420px;
+  padding: 2rem 0;
+}
+.carrossel-card.center {
+  max-width: 380px;
+  min-width: 340px;
+  height: 420px;
+  margin: 0 1rem;
+  flex: 1 1 340px;
+  display: flex;
+}
+.carrossel-card {
+  flex: 1 1 340px;
+  max-width: 340px;
+  min-width: 340px;
+  height: 20px;
+  margin: 0 1rem;
+  display: flex;
+}
+.carrosel-section {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+}
+
+.carrossel-title {
+  text-align: left;
+  font-family: "Body Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #1a2952;
+  border-left: 4px solid #138e98;
+  padding-left: 0.7rem;
 }
 
 .carrossel-center-wrapper {
@@ -20,7 +45,7 @@
 }
 
 .carrossel-arrow {
-  background: #00bcd4;
+  background: #138e98;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -51,7 +76,7 @@
   background: #1a2952;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  max-width: 420px;
+  max-width: 320px;
   width: 100%;
   min-height: 420px;
   height: 420px;
@@ -80,7 +105,7 @@
 }
 
 .carrossel-tag {
-  background: #00bcd4;
+  background: #138e98;
   color: #fff;
   border-radius: 6px;
   padding: 0.18rem 0.7rem;
@@ -101,7 +126,7 @@
 }
 
 .carrossel-btn {
-  background: #00bcd4;
+  background: #138e98;
   color: #fff;
   border: none;
   border-radius: 1rem;
@@ -121,13 +146,41 @@
   background: #0097a7;
 }
 
-@media (max-width: 700px) {
-  .carrossel-card.center {
-    max-width: 300px;
-    min-width: 280px;
-    height: 240px;
+@media (min-width: 700px) and (max-width: 1024px) {
+  .carrossel-section {
+    padding: 1rem 2rem;
   }
-  .carrossel-img {
-    height: 260px;
+  .carrossel-center-wrapper {
+    gap: 2rem;
+    min-height: 360px;
+  }
+  .carrossel-card,
+  .carrossel-card.center {
+    min-width: 250px;
+    max-width: 300px;
+    height: 360px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carrossel-section {
+    padding: 2rem 1rem;
+  }
+
+  .carrossel-title {
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .carrossel-center-wrapper {
+    gap: 2.5rem;
+    min-height: 420px;
+    padding: 2rem 0;
+  }
+  .carrossel-card,
+  .carrossel-card.center {
+    min-width: 250px;
+    max-width: 250px;
+    height: 420px;
   }
 }

@@ -14,18 +14,12 @@ body {
   background: var(--color-bg);
   font-family: var(--font-main);
   color: var(--color-primary);
+  margin: 0;
+  padding: 0;
 }
 
 .curso-page {
-  min-height: 100vh;
   background: var(--color-bg);
-}
-
-.curso-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 h1,
@@ -37,17 +31,17 @@ h3 {
 }
 
 /* Utilitários */
-.hidden {
+/* .hidden {
   display: none !important;
 }
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* Breakpoints para uso nos componentes */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .curso-container {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -58,4 +52,4 @@ h3 {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-}
+} */

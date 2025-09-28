@@ -8,13 +8,13 @@
   font-family: "Body Sans", Arial, Helvetica, sans-serif;
   text-align: center;
   color: #1a2952;
-  font-size: 1.5rem !important;
 }
 
 .curso-info-grid {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .curso-info-item {
@@ -38,19 +38,29 @@
   color: #222;
 }
 
-@media (max-width: 700px) {
-  .curso-info-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+@media (min-width: 700px) and (max-width: 1024px) {
+  .curso-info-title {
+    font-size: 1rem;
   }
+}
+
+@media (min-width: 1024px) {
   .curso-info-section {
-    padding: 1.2rem 0.5rem;
+    margin: 2rem 0;
   }
   .curso-info-section-title {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .curso-info-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  .curso-info-title {
+    font-size: 1.2rem;
   }
   .curso-info-value {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }

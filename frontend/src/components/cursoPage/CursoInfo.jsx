@@ -11,7 +11,7 @@ const CursoInfo = ({ informacoes }) => {
 
   return (
     <section className="curso-info-section">
-      <h2 className="curso-info-section-title">Informações do Curso</h2>
+      <h2 className="curso-info-section-title">Detalhes do Curso</h2>
       <div className="curso-info-grid">
         {infoList.map((item, idx) => (
           <div className="curso-info-item" key={idx}>

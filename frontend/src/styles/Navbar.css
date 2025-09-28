@@ -1,13 +1,11 @@
-/* =====================
-   MOBILE (padrão)
-   ===================== */
+/* Navbar institucional - MOBILE FIRST */
 .navbar-container {
   width: 100%;
+  background: #1a2952;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1a2952;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* espaçamento interno */
 }
 
 .navbar-container .container {
@@ -24,40 +22,51 @@
   padding: 1rem;
 }
 
-/* Links mobile escondidos por padrão */
+/* Menu hamburguer - escondido por padrão */
 .navbar-links {
   display: none;
 }
 
-/* Links ativos (menu aberto) */
+/* Menu hamburguer expandido */
 .navbar-links.active {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: #1a2952;
-  text-align: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  padding: 0;
 }
 
+.navbar-link,
 .navbar-links a {
-  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Body Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0.7rem 0;
+  padding: 0.7rem 2.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.04em;
+  box-shadow: none;
+}
+.navbar-link:hover,
+.navbar-links a:hover {
+  background: #138e98;
   color: #fff;
   text-decoration: none;
-  padding: 0.75rem 1rem;
-  transition: color 0.2s;
 }
 
-.navbar-links a:hover {
-  color: #00bcd4;
-  text-decoration: underline;
-}
-
-/* Hambúrguer visível no mobile - ponta direita usando flex */
 .navbar-hamburger {
   display: block;
   background: none;
@@ -65,29 +74,21 @@
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
-  margin-left: auto; /* empurra para a ponta direita */
-  z-index: 20;
+  margin-left: auto;
+  z-index: 1100;
 }
 
-/* =====================
-   TABLET
-   ===================== */
 @media (min-width: 768px) {
   .navbar-logo img {
     height: 3.5rem;
     padding: 1rem;
   }
-
   .navbar-links.active {
-    top: 70px; /* ajuste topo */
+    top: 0;
   }
 }
 
-/* =====================
-   DESKTOP
-   ===================== */
 @media (min-width: 1024px) {
-  /* Links sempre visíveis em desktop */
   .navbar-links {
     display: flex;
     flex-direction: row;
@@ -99,17 +100,23 @@
     text-align: left;
     padding: 0;
   }
-
+  .navbar-link,
   .navbar-links a {
-    padding: 0;
-    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #fff;
+    background: none;
+    border-radius: 6px;
   }
-
-  /* Hambúrguer escondido em desktop */
+  .navbar-link:hover,
+  .navbar-links a:hover {
+    background: #138e98;
+    color: #fff;
+  }
   .navbar-hamburger {
     display: none;
   }
-
   .navbar-logo img {
     height: 4rem;
     padding: 1.5rem;

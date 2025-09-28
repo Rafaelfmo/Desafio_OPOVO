@@ -5,6 +5,23 @@ import "../../styles/cursoPage/cursosCarrossel.css";
 const CursosCarrossel = ({ cursoAtualId }) => {
   const [cursos, setCursos] = useState([]);
   const [index, setIndex] = useState(0);
+  const [cardsPorVez, setCardsPorVez] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      if (w <= 700) {
+        setCardsPorVez(1);
+      } else if (w > 700 && w <= 1024) {
+        setCardsPorVez(2);
+      } else {
+        setCardsPorVez(3);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:8000/cursos.php")
@@ -19,7 +36,14 @@ const CursosCarrossel = ({ cursoAtualId }) => {
   const prev = () => setIndex((i) => (i === 0 ? cursos.length - 1 : i - 1));
   const next = () => setIndex((i) => (i === cursos.length - 1 ? 0 : i + 1));
 
-  const curso = cursos[index];
+  // Seleciona os cursos para exibir
+  const cursosVisiveis = cursos.slice(index, index + cardsPorVez);
+  // Se chegar ao final do array, completa com os primeiros cursos
+  if (cursosVisiveis.length < cardsPorVez && cursos.length > 0) {
+    cursosVisiveis.push(
+      ...cursos.slice(0, cardsPorVez - cursosVisiveis.length)
+    );
+  }
 
   return (
     <section className="carrossel-section">
@@ -32,7 +56,7 @@ const CursosCarrossel = ({ cursoAtualId }) => {
         >
           &#8592;
         </button>
-        {curso && (
+        {cursosVisiveis.map((curso) => (
           <div className="carrossel-card center" key={curso.id}>
             <img
               src={curso.imagem}
@@ -51,7 +75,7 @@ const CursosCarrossel = ({ cursoAtualId }) => {
               Ver mais
             </Link>
           </div>
-        )}
+        ))}
         <button
           className="carrossel-arrow right"
           onClick={next}
