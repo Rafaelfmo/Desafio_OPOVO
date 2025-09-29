@@ -59,6 +59,13 @@
 ## Estrutura
 
 - `/frontend`: Aplicação React (responsiva)
+  - `src/components/`: Componentes reutilizáveis organizados por sessão (ex: home, cursoPage)
+  - `src/styles/`: CSS modularizado por sessão e página
+  - `src/pages/`: Páginas principais do site (ex: Home, CursoPage)
+  - `src/assets/`: Imagens, ícones e recursos estáticos
+  - `src/App.jsx`: Componente raiz e configuração de rotas
+  - `src/index.js`: Ponto de entrada da aplicação React
+  - Estrutura pensada para facilitar manutenção, expansão e responsividade
 - `/backend`: API PHP que retorna os dados dos cursos em JSON
 - `/docs`: Documentação do projeto
 
