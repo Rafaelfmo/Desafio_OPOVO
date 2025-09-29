@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../../styles/cursoPage/cursosCarrossel.css";
 
 const CursosCarrossel = ({ cursoAtualId }) => {
@@ -54,7 +55,7 @@ const CursosCarrossel = ({ cursoAtualId }) => {
           onClick={prev}
           aria-label="Anterior"
         >
-          &#8592;
+          <FaChevronLeft />
         </button>
         {cursosVisiveis.map((curso) => (
           <div className="carrossel-card center" key={curso.id}>
@@ -81,7 +82,7 @@ const CursosCarrossel = ({ cursoAtualId }) => {
           onClick={next}
           aria-label="Próximo"
         >
-          &#8594;
+          <FaChevronRight />
         </button>
       </div>
     </section>
