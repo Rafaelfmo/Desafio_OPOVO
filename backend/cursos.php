@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json');
 
-// Dados simulados dos cursos
 $cursos = [
     [
         'id' => 1,
@@ -89,10 +88,8 @@ $cursos = [
     ]
 ];
 
-// Permitir CORS para o frontend
 header('Access-Control-Allow-Origin: *');
 
-// Verifica se foi passado um parâmetro id
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $cursoEncontrado = null;
@@ -111,5 +108,4 @@ if (isset($_GET['id'])) {
     exit;
 }
 
-// Se não houver parâmetro, retorna todos
 echo json_encode($cursos);

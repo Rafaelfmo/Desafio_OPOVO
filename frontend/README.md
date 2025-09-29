@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Landing Page de Cursos UANE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Projeto institucional responsivo para divulgação de cursos da UANE, com frontend React e backend PHP simples.
 
-## Available Scripts
+## Instalação e Execução
 
-In the project directory, you can run:
+### Backend (API PHP)
 
-### `npm start`
+1. Acesse a pasta `/backend`.
+2. Execute o servidor embutido do PHP:
+   ```powershell
+   php -S localhost:8000
+   ```
+3. Acesse `http://localhost:8000/cursos.php` para ver os dados dos cursos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend (React)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Acesse a pasta `/frontend`.
+2. Instale as dependências:
+   ```powershell
+   npm install
+   ```
+3. Inicie o projeto:
+   ```powershell
+   npm start
+   ```
+4. O frontend irá consumir a API PHP e exibir os cursos dinamicamente.
 
-### `npm test`
+## Decisões Técnicas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:**
 
-### `npm run build`
+  - React com componentes funcionais e hooks (`useState`, `useEffect`, `useParams`, etc).
+  - Estilização mobile first, com CSS modularizado por sessão e breakpoints institucionais.
+  - Navegação por React Router, rotas dinâmicas para cada curso (`/curso/:id`).
+  - Carrosséis customizados para cursos e depoimentos, sem dependências externas.
+  - Scroll suave entre seções via navbar, com gerenciamento de estado para navegação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Backend:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - PHP simples, apenas um arquivo (`cursos.php`) simulando uma API REST.
+  - Dados dos cursos em array estático, retornando JSON.
+  - Suporte a CORS para integração com frontend local.
+  - Busca dinâmica de curso por id via parâmetro GET.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Responsividade:**
 
-### `npm run eject`
+  - Layout adaptado para mobile, tablet e desktop.
+  - Componentes e grids ajustados para diferentes tamanhos de tela.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Gerenciamento de Estado:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Uso de `useState` para dados dinâmicos, navegação de carrossel, curso selecionado, etc.
+  - `useEffect` para buscar dados da API e atualizar interface.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Hooks:**
+  - Utilização de hooks do React para estado, efeitos, navegação e parâmetros de rota.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estrutura
 
-## Learn More
+- `/frontend`: Aplicação React (responsiva)
+- `/backend`: API PHP que retorna os dados dos cursos em JSON
+- `/docs`: Documentação do projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Observações
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- O backend é estático, ideal para prototipação ou sites institucionais simples.
+- Para projetos maiores, recomenda-se evoluir a estrutura do backend.
+- O frontend pode ser facilmente expandido para novas sessões ou integrações.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto desenvolvido por [Rafaelfmo](https://github.com/Rafaelfmo) para avaliação técnica.

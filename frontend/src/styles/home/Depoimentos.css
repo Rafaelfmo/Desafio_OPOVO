@@ -4,6 +4,11 @@
   padding: 1rem 0rem;
 }
 
+.depoimentos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .depoimentos-title {
   margin: 1rem 1rem;
   text-align: left;

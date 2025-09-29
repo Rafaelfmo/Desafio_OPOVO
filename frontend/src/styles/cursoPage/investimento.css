@@ -1,4 +1,5 @@
 .investimento-section {
+  max-width: 1200px;
   padding: 2rem 1rem;
   margin: 2rem 0;
 }
@@ -107,6 +108,10 @@
 }
 
 @media (min-width: 1024px) {
+  .investimento-section {
+    margin: 2rem auto;
+  }
+
   .investimento-cards {
     display: flex;
     flex-direction: row;
@@ -124,6 +129,6 @@
     margin-top: 0;
   }
   .investimento-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }

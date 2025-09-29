@@ -1,7 +1,8 @@
 .curso-info-section {
-  background: #f7f7f7;
-  margin: 2rem 0;
+  max-width: 1200px;
   width: 100%;
+  padding: 1rem 0;
+  background: #f7f7f7;
 }
 
 .curso-info-section-title {
@@ -46,7 +47,7 @@
 
 @media (min-width: 1024px) {
   .curso-info-section {
-    margin: 2rem 0;
+    margin: 2rem auto;
   }
   .curso-info-section-title {
     font-size: 1.8rem;

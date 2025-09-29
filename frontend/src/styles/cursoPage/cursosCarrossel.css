@@ -1,3 +1,9 @@
+.carrossel-section {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+}
+
 .carrossel-center-wrapper {
   justify-content: center;
   gap: 2.5rem;
@@ -19,10 +25,6 @@
   height: 20px;
   margin: 0 1rem;
   display: flex;
-}
-.carrosel-section {
-  padding: 2rem 1rem;
-  margin: 2rem 0;
 }
 
 .carrossel-title {
@@ -162,10 +164,11 @@
 @media (min-width: 1024px) {
   .carrossel-section {
     padding: 2rem 1rem;
+    margin: 2rem auto;
   }
 
   .carrossel-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding-left: 0.5rem;
   }
 

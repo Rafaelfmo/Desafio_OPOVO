@@ -3,6 +3,12 @@
   background: linear-gradient(180deg, #1a2952 0%, #138e98 150%);
 }
 
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .banner-curso {
   border-radius: 0;
   padding: 2rem 0;
@@ -159,14 +165,14 @@
   }
   .banner-curso-img-wrapper {
     position: absolute;
-    top: 9rem;
-    right: 7.5rem;
+    top: 6rem;
+    right: 1rem;
     height: auto;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 400px;
+    width: 500px;
   }
   .banner-curso-img {
     width: 100%;
@@ -177,7 +183,72 @@
   .banner-curso-tags {
     gap: 1rem;
     margin-bottom: 1.2rem;
-    margin-right: 38rem;
+    margin-right: 43rem;
+    padding-left: 1rem;
+  }
+  .banner-curso-titulo {
+    margin-right: auto;
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    padding-left: 2rem;
+  }
+  .banner-curso-descricao {
+    font-size: 1.15rem;
+    text-align: justify;
+    margin-right: auto;
+    max-width: 40%;
+    line-height: 1.6;
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+  .banner-curso-realizacao {
+    margin-right: auto;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+    margin: auto;
+    padding-right: 32rem;
+  }
+  .banner-curso-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    margin-top: 1.2rem;
+    border-radius: 1rem;
+    margin-right: 32rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .banner-curso {
+    position: relative;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 24px rgba(26, 41, 82, 0.12);
+    min-height: 520px;
+  }
+  .banner-curso-content {
+    z-index: 1;
+  }
+  .banner-curso-img-wrapper {
+    position: absolute;
+    top: 6rem;
+    right: 3rem;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 520px;
+  }
+  .banner-curso-img {
+    width: 100%;
+    max-width: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+  .banner-curso-tags {
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    margin-right: 56rem;
     padding-left: 1rem;
   }
   .banner-curso-titulo {
@@ -194,25 +265,24 @@
     max-width: 40%;
     line-height: 1.6;
     margin-top: -1rem;
-    margin-left: 1rem;
   }
   .banner-curso-realizacao {
     margin-right: auto;
     gap: 1.5rem;
     margin-bottom: 1.2rem;
     margin: auto;
-    padding-right: 38rem;
+    padding-right: 41rem;
   }
   .banner-curso-btn {
     font-size: 1.2rem;
     padding: 1rem 2.5rem;
     margin-top: 1.2rem;
     border-radius: 1rem;
-    margin-right: 38rem;
+    margin-right: 41rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .banner-curso {
     position: relative;
     padding: 3rem 2.5rem;
@@ -224,14 +294,14 @@
   }
   .banner-curso-img-wrapper {
     position: absolute;
-    top: 4rem;
-    right: 3rem;
+    top: 6rem;
+    right: 0.1rem;
     height: auto;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 620px;
+    width: 500px;
   }
   .banner-curso-img {
     width: 100%;
@@ -240,38 +310,40 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   }
   .banner-curso-tags {
+    width: 100%;
     gap: 1rem;
     margin-bottom: 1.2rem;
-    margin-right: 48rem;
-    padding-left: 1rem;
+    padding-left: 3rem;
   }
   .banner-curso-titulo {
     margin-right: auto;
-    font-size: 2.2rem;
+    width: 720px;
+    font-size: 1.5rem;
     margin-bottom: 1.2rem;
     text-align: left;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
   .banner-curso-descricao {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     text-align: justify;
     margin-right: auto;
     max-width: 40%;
     line-height: 1.6;
     margin-top: -1rem;
+    margin-left: 1rem;
   }
   .banner-curso-realizacao {
     margin-right: auto;
     gap: 1.5rem;
     margin-bottom: 1.2rem;
     margin: auto;
-    padding-right: 48rem;
+    padding-right: 40em;
   }
   .banner-curso-btn {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    padding: rem 2.5rem;
     margin-top: 1.2rem;
     border-radius: 1rem;
-    margin-right: 48rem;
+    margin-right: 40rem;
   }
 }

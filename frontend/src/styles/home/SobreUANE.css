@@ -5,6 +5,11 @@
   padding: 1rem 0;
 }
 
+.sobre-uane-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .sobre-uane-title {
   margin: 1rem 1rem;
   text-align: left;
@@ -74,7 +79,7 @@
     font-size: 1.5rem;
   }
   .sobre-uane-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 2fr);
     gap: 0r.5em;
   }
   .sobre-uane-item {
@@ -99,5 +104,21 @@
     opacity: 0.1;
     pointer-events: none;
     z-index: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sobre-uane-title {
+    font-size: 1.8rem;
+  }
+  .sobre-uane-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .sobre-uane-item {
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 180px;
+    justify-content: center;
   }
 }

@@ -1,4 +1,5 @@
 .faq-mod-section {
+  max-width: 1200px;
   padding: 2rem 1rem;
   margin: 2rem 0;
 }
@@ -73,5 +74,11 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .faq-mod-section {
+    margin: 2rem auto;
   }
 }
