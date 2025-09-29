@@ -69,17 +69,35 @@
 }
 
 /* DESKTOP */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .sobre-uane-title {
     font-size: 1.5rem;
   }
   .sobre-uane-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0r.5em;
   }
   .sobre-uane-item {
     justify-content: center;
-    min-height: 200px;
-    max-width: 200px;
+    min-height: 170px;
+    max-width: 170px;
+  }
+
+  .sobre-uane-item {
+    position: relative;
+  }
+
+  .sobre-uane-item::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 20px;
+    background: radial-gradient(circle, #138e98 0%, transparent 60%);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
   }
 }

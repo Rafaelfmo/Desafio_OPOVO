@@ -12,7 +12,7 @@ const CursosCarrossel = ({ cursoAtualId }) => {
       const w = window.innerWidth;
       if (w <= 700) {
         setCardsPorVez(1);
-      } else if (w > 700 && w <= 1024) {
+      } else if (w > 700 && w <= 900) {
         setCardsPorVez(2);
       } else {
         setCardsPorVez(3);

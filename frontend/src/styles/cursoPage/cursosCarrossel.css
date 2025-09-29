@@ -45,25 +45,21 @@
 }
 
 .carrossel-arrow {
-  background: #138e98;
-  color: #fff;
-  border: none;
+  font-size: 1.7rem;
+  color: #138e98;
+  background: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1rem;
-  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(26, 41, 82, 0.1);
+  border: none;
   cursor: pointer;
+  transition: background 0.2s, color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  transition: background 0.2s, transform 0.2s;
-  margin: 0 0.5rem;
-  z-index: 1;
 }
 .carrossel-arrow:hover {
-  background: #0097a7;
+  background: #138e98;
+  color: #fff;
   transform: scale(1.08);
 }
 .carrossel-arrow.left {
@@ -151,12 +147,13 @@
     padding: 1rem 2rem;
   }
   .carrossel-center-wrapper {
-    gap: 2rem;
+    gap: 1.5rem;
     min-height: 360px;
+    padding: 1rem 1;
   }
   .carrossel-card,
   .carrossel-card.center {
-    min-width: 250px;
+    min-width: 220px;
     max-width: 300px;
     height: 360px;
   }
