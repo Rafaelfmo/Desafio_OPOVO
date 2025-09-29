@@ -1,26 +1,18 @@
 /* PARCEIROS - CSS INSTITUCIONAL DO ZERO */
 .parcerias-container {
   width: 100%;
-  background: #f5f7fa;
-  padding: 3rem 0;
+  background: #fff;
+  padding: 1rem 0;
 }
 
 .parcerias-titulo {
-  font-size: 2rem;
-  font-weight: bold;
+  margin: 1rem 1rem;
+  text-align: left;
+  font-family: "Body Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   color: #1a2952;
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-}
-.parcerias-titulo::before {
-  content: "";
-  display: inline-block;
-  width: 0.25rem;
-  height: 2rem;
-  background: #00bcd4;
-  border-radius: 0.125rem;
-  margin-right: 1rem;
+  border-left: 4px solid #138e98;
+  padding-left: 0.7rem;
 }
 
 .parcerias-list {
@@ -50,7 +42,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
 }
 .parceria-logo {
-  width: 120px;
+  width: 220px;
   height: 120px;
   display: flex;
   align-items: center;
@@ -82,7 +74,7 @@
   justify-content: center;
 }
 .parceria-redes a {
-  color: #0097a7;
+  color: #138e98;
   font-size: 1.5rem;
   transition: color 0.2s;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Parcerias.css";
+import "../../styles/home/Parcerias.css";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const parcerias = [

@@ -1,7 +1,6 @@
-import React from "react";
-import Slider from "react-slick";
-import "../../styles/Depoimentos.css";
+import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "../../styles/home/Depoimentos.css";
 
 const depoimentos = [
   {
@@ -48,54 +47,73 @@ const depoimentos = [
   },
 ];
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  arrows: true,
-  nextArrow: <FaChevronRight className="depoimentos-nav right" />,
-  prevArrow: <FaChevronLeft className="depoimentos-nav left" />,
-  responsive: [
-    {
-      breakpoint: 1100,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 700,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
+const getSlidesToShow = () => {
+  if (window.innerWidth < 700) return 1;
+  if (window.innerWidth < 1100) return 2;
+  return 2;
 };
 
-const Depoimentos = () => (
-  <section className="depoimentos-container" id="depoimentos">
-    <div className="container">
-      <h2 className="depoimentos-titulo">Depoimentos</h2>
-      <Slider {...settings} className="depoimentos-list">
-        {depoimentos.map((d, idx) => (
-          <div className="depoimento-card" key={idx}>
-            <div className="depoimento-foto">
-              <img src={d.foto} alt={d.nome} />
-            </div>
-            <div className="depoimento-texto-wrapper">
-              <div className="depoimento-texto">“{d.texto}”</div>
-            </div>
-            <div className="depoimento-footer">
-              <hr />
-              <div className="depoimento-nome">{d.nome}</div>
-              <div className="depoimento-cargo">{d.cargo}</div>
-            </div>
+const Depoimentos = () => {
+  const [current, setCurrent] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
+  React.useEffect(() => {
+    const handleResize = () => setSlidesToShow(getSlidesToShow());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const maxIndex = depoimentos.length - slidesToShow;
+  const goPrev = () => setCurrent((prev) => Math.max(prev - 1, 0));
+  const goNext = () => setCurrent((prev) => Math.min(prev + 1, maxIndex));
+
+  return (
+    <section className="depoimentos-section" id="depoimentos">
+      <div className="depoimentos-container">
+        <h2 className="depoimentos-title">Depoimentos</h2>
+
+        <div className="depoimentos-slider-custom">
+          <button
+            className="depoimentos-arrow left"
+            onClick={goPrev}
+            disabled={current === 0}
+          >
+            <FaChevronLeft />
+          </button>
+          <div className="depoimentos-cards-wrapper">
+            {depoimentos
+              .slice(current, current + slidesToShow)
+              .map((d, idx) => (
+                <div className="depoimento-card" key={current + idx}>
+                  <div className="depoimento-foto-wrapper">
+                    <img
+                      className="depoimento-foto"
+                      src={d.foto}
+                      alt={d.nome}
+                    />
+                  </div>
+                  <div className="depoimento-texto-wrapper">
+                    <div className="depoimento-texto">“{d.texto}”</div>
+                  </div>
+                  <div className="depoimento-footer">
+                    <hr className="depoimento-divider" />
+                    <div className="depoimento-nome">{d.nome}</div>
+                    <div className="depoimento-cargo">{d.cargo}</div>
+                  </div>
+                </div>
+              ))}
           </div>
-        ))}
-      </Slider>
-    </div>
-  </section>
-);
+          <button
+            className="depoimentos-arrow right"
+            onClick={goNext}
+            disabled={current === maxIndex}
+          >
+            <FaChevronRight />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Depoimentos;
